@@ -1,0 +1,17 @@
+#!/bin/bash
+divide() {
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+while [ $num2 -ne 0 ];
+do  
+result=$((num1/num2))
+echo "the result is: $result"
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+done 
+if [[ $num2 -eq 0 ]]
+then
+echo " you cant divide by zero"
+fi
+}
+divide
