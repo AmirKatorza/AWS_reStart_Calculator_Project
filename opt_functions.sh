@@ -1,5 +1,25 @@
 #!/bin/bash
 
+function input_valid() {
+  local re='^-?[0-9]+$'
+  if [[ $1 =~ $re && $2 =~ $re ]]; 
+  then
+    echo "1"
+  else 
+    echo "0"
+  fi
+}
+
+function input_valid_div_mod() {
+  local re_num1='^-?[0-9]+$'
+  local re_num2='^-?[1-9]+$'
+  if [[ $1 =~ $re_num1 && $2 =~ $re_num2 ]]; 
+  then
+    echo "1"
+  else 
+    echo "0"
+  fi
+}
 
 # Function for addition
 function add {
